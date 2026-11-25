@@ -1,0 +1,813 @@
+const DATA = {
+  "questions": [
+    [
+      "Suka berimajinasi",
+      "Suka menyelidik",
+      "Bersifat realistis",
+      "Suka menganalisis"
+    ],
+    [
+      "Teratur",
+      "Mudah beradaptasi",
+      "Kritis",
+      "Penuh rasa ingin tahu"
+    ],
+    [
+      "Suka berdebat",
+      "Langsung pada permasalahan",
+      "Suka mencipta",
+      "Suka menghubung-hubungkan"
+    ],
+    [
+      "Personal / pribadi",
+      "Praktis",
+      "Akademis",
+      "Suka berpetualang"
+    ],
+    [
+      "Tepat",
+      "Fleksibel",
+      "Sistematis",
+      "Penemu"
+    ],
+    [
+      "Suka berbagi",
+      "Teratur",
+      "Penuh perasaan",
+      "Mandiri"
+    ],
+    [
+      "Kompetitif",
+      "Perfeksionis",
+      "Kooperatif",
+      "Logis"
+    ],
+    [
+      "Suka membaca",
+      "Suka bergaul",
+      "Mampu memecahkan masalah",
+      "Suka membuat perencanaan"
+    ],
+    [
+      "Suka keteraturan",
+      "Suka berinteraksi dengan orang lain",
+      "Gemar mencoba hal baru",
+      "Jago membuat rencana"
+    ],
+    [
+      "Suka/jago menghafal",
+      "Berasosiasi",
+      "Berpikir mendalam",
+      "Kreatif"
+    ],
+    [
+      "Reformis",
+      "Suka membuat penilaian",
+      "Spontan",
+      "Mengharap arahan"
+    ],
+    [
+      "Berkomunikasi",
+      "Menemukan",
+      "Waspada / hati-hati",
+      "Menggunakan nalar"
+    ],
+    [
+      "Suka tantangan",
+      "Suka berlatih (practicing)",
+      "Peduli",
+      "Memeriksa"
+    ],
+    [
+      "Menyelesaikan masalah",
+      "Melihat kemungkinan-kemungkinan",
+      "Mendapat gagasan",
+      "Menafsirkan"
+    ],
+    [
+      "Mengerjakan",
+      "Berperasaan",
+      "Berpikir",
+      "Bereksperimen"
+    ]
+  ],
+  "key": [
+    "CDAB",
+    "ACBD",
+    "BADC",
+    "BCAD",
+    "ACBD",
+    "BCAD",
+    "BDCA",
+    "CABD",
+    "DABC",
+    "ACBD",
+    "DBCA",
+    "CDAB",
+    "BDCA",
+    "ACDB",
+    "ACBD"
+  ],
+  "words": {
+    "TRUST": "Fondasi keyakinan terhadap seseorang dalam sebuah hubungan.",
+    "ACCOUNTABILITY": "Kesediaan mempertanggungjawabkan tindakan, keputusan, dan hasil.",
+    "COMMITMENT": "Kesungguhan untuk memenuhi apa yang telah dijanjikan.",
+    "OWNERSHIP": "Rasa memiliki yang mendorong kepedulian terhadap keberhasilan bersama.",
+    "TEAM": "Sekelompok individu yang bekerja menuju tujuan bersama.",
+    "GROWTH": "Proses berkembang menjadi lebih baik dari sebelumnya.",
+    "PURPOSE": "Alasan mendasar yang memberikan makna pada suatu tindakan.",
+    "MANUNGGAL": "Menyatunya berbagai unsur menjadi satu kesatuan.",
+    "BERSAMA": "Melakukan sesuatu dengan orang lain.",
+    "TUJUAN": "Sesuatu yang ingin dicapai melalui suatu usaha.",
+    "PERCAYA": "Meyakini bahwa seseorang dapat diandalkan.",
+    "PEDULI": "Memberikan perhatian terhadap keadaan dan kebutuhan orang lain.",
+    "INISIATIF": "Bertindak tanpa harus menunggu diminta.",
+    "KOLABORASI": "Proses bekerja dengan orang lain untuk menghasilkan sesuatu.",
+    "KONTRIBUSI": "Sumbangan tenaga, pemikiran, atau tindakan bagi suatu hasil.",
+    "KOMUNIKASI": "Proses menyampaikan dan menerima informasi untuk membangun pemahaman.",
+    "TARGET": "Sasaran spesifik dan terukur yang ingin dicapai.",
+    "SELARAS": "Keadaan ketika berbagai tindakan dan arah saling bersesuaian.",
+    "TUMBUH": "Mengalami perkembangan menuju kondisi yang lebih baik.",
+    "SINERGI": "Perpaduan berbagai kekuatan yang menghasilkan manfaat lebih besar."
+  },
+  "board": [
+    "ICNKONTRIBUSIJAN",
+    "SGSFITAISINIECBF",
+    "IGROWTHESSBMCCEM",
+    "BLGEVCDAPVBOOQRA",
+    "XJOHNKKBUPURPOSE",
+    "QCOMMITMENTGMWAT",
+    "VWAWNOSSTUJUANMJ",
+    "NGCUTPAATOPKDEAF",
+    "BIMTVYBCRHTSURTW",
+    "SOSEAINAVOYABSYM",
+    "KANCLRJGRGBJUHTV",
+    "IPRILAGGNUNAMIYP",
+    "PETADWZEUFSELPUU",
+    "PYDELNESTTJJXOKP",
+    "XILUDEPUUOTSRHKG",
+    "UMHLGWSATUMBUHVO"
+  ],
+  "paths": {
+    "ACCOUNTABILITY": [
+      [
+        0,
+        14
+      ],
+      [
+        1,
+        13
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        3,
+        11
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        11,
+        3
+      ],
+      [
+        12,
+        2
+      ],
+      [
+        13,
+        1
+      ]
+    ],
+    "COMMITMENT": [
+      [
+        5,
+        1
+      ],
+      [
+        5,
+        2
+      ],
+      [
+        5,
+        3
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ]
+    ],
+    "KOLABORASI": [
+      [
+        14,
+        14
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        5,
+        5
+      ]
+    ],
+    "KONTRIBUSI": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        0,
+        7
+      ],
+      [
+        0,
+        8
+      ],
+      [
+        0,
+        9
+      ],
+      [
+        0,
+        10
+      ],
+      [
+        0,
+        11
+      ],
+      [
+        0,
+        12
+      ]
+    ],
+    "KOMUNIKASI": [
+      [
+        10,
+        0
+      ],
+      [
+        9,
+        1
+      ],
+      [
+        8,
+        2
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        1,
+        9
+      ]
+    ],
+    "OWNERSHIP": [
+      [
+        4,
+        13
+      ],
+      [
+        5,
+        13
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        12,
+        13
+      ]
+    ],
+    "MANUNGGAL": [
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        11,
+        8
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        11,
+        6
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        11,
+        4
+      ]
+    ],
+    "INISIATIF": [
+      [
+        1,
+        11
+      ],
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        9
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "PURPOSE": [
+      [
+        4,
+        9
+      ],
+      [
+        4,
+        10
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        4,
+        12
+      ],
+      [
+        4,
+        13
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        4,
+        15
+      ]
+    ],
+    "BERSAMA": [
+      [
+        1,
+        14
+      ],
+      [
+        2,
+        14
+      ],
+      [
+        3,
+        14
+      ],
+      [
+        4,
+        14
+      ],
+      [
+        5,
+        14
+      ],
+      [
+        6,
+        14
+      ],
+      [
+        7,
+        14
+      ]
+    ],
+    "PERCAYA": [
+      [
+        13,
+        0
+      ],
+      [
+        12,
+        1
+      ],
+      [
+        11,
+        2
+      ],
+      [
+        10,
+        3
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        7,
+        6
+      ]
+    ],
+    "SELARAS": [
+      [
+        15,
+        6
+      ],
+      [
+        14,
+        5
+      ],
+      [
+        13,
+        4
+      ],
+      [
+        12,
+        3
+      ],
+      [
+        11,
+        2
+      ],
+      [
+        10,
+        1
+      ],
+      [
+        9,
+        0
+      ]
+    ],
+    "SINERGI": [
+      [
+        6,
+        6
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "GROWTH": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "TUJUAN": [
+      [
+        6,
+        8
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        6,
+        13
+      ]
+    ],
+    "PEDULI": [
+      [
+        14,
+        6
+      ],
+      [
+        14,
+        5
+      ],
+      [
+        14,
+        4
+      ],
+      [
+        14,
+        3
+      ],
+      [
+        14,
+        2
+      ],
+      [
+        14,
+        1
+      ]
+    ],
+    "TARGET": [
+      [
+        8,
+        3
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        11,
+        6
+      ],
+      [
+        12,
+        7
+      ],
+      [
+        13,
+        8
+      ]
+    ],
+    "TUMBUH": [
+      [
+        15,
+        8
+      ],
+      [
+        15,
+        9
+      ],
+      [
+        15,
+        10
+      ],
+      [
+        15,
+        11
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        15,
+        13
+      ]
+    ],
+    "TRUST": [
+      [
+        8,
+        14
+      ],
+      [
+        8,
+        13
+      ],
+      [
+        8,
+        12
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        8,
+        10
+      ]
+    ],
+    "TEAM": [
+      [
+        5,
+        15
+      ],
+      [
+        4,
+        15
+      ],
+      [
+        3,
+        15
+      ],
+      [
+        2,
+        15
+      ]
+    ]
+  }
+};
